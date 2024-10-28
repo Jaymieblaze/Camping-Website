@@ -9,10 +9,27 @@
     --title-color: hsl(210, 52%, 20%);
     --text-color: hsl(210, 24%, 15%);
     --white-color: #fff;
-    --body-color: hsl(2110, 55%, 85%);
+    --body-color: hsl(210, 55%, 85%);
 
-    
+    /* Font and Typography */
+    /* .5rem =8px / 1rem = 16px */
+    --body-font: 'Poppins', sans-serif;
+    --second-font: 'Lora', serif;
+    --biggest-font-size: 2.5rem;
+    --normal-font-size: .938rem;
+    --small-font-size : .813rem;
+
+    /* Font weight */
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /* z index */
+    --z-tooltip: 10;
+    --z-fixed: 100;
 }
+
+/* BASE */
 
 *{
     box-sizing: border-box;
@@ -21,5 +38,103 @@
 }
 
 body{
-    font-family: ;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* REUSABLE CSS CLASSES */
+
+.container{
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+.main{
+    overflow:hidden; /*For Animations*/
+}
+
+/* HEADER & NAV */
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--body-color);
+    z-index: var(--z-fixed);
+}
+
+.nav{
+    position: relative;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo{
+    width: 36px;
+}
+
+.nav-toggle, .nav-close{
+    display: inline-flex;
+    font-size: 1.25rem;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+/* Navigation for smaller screens */
+@media screen  and (max-width: 1023px){
+    .nav-menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: var(--body-color);
+        width: 100%;
+        box-shadow: 0 1px 16px hsla(210, 55%, 24%, 0.1);
+        padding-block: 3.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.5rem;
+        transition: top 4s;
+    }
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 2rem;
+}
+
+.nav-link{
+    color: var(--title-color);
+    transition: color .3s;
+}
+
+.nav-link:hover{
+    color: var(--first-color);
+}
+
+.nav-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: .75rem;
 }
