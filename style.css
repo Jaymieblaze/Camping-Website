@@ -101,7 +101,7 @@ img{
 
 /* Navigation for smaller screens */
 @media screen  and (max-width: 1023px){
-    .nav-menu{
+    .nav__menu{
         position: fixed;
         top: -100%;
         left: 0;
@@ -151,8 +151,12 @@ img{
     border-radius: .75rem;
 }
 
-.nav-close{
+.nav__close{
     position: absolute;
     top: 1rem;
     right: 1.5rem;
+}
+
+.show-menu{
+    top: 0;
 }
