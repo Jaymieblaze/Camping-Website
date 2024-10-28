@@ -282,7 +282,7 @@ img{
 /* For Medium Devices */
 @media screen and (min-width: 480px){
     .home__content{
-        max-width: 305px;
+        max-width: 350px;
     }
     .home__bird-2{
         right:-3rem;
