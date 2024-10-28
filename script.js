@@ -3,6 +3,7 @@ const navMenu = document.getElementById('nav-menu');
 const navToggle = document.getElementById('nav-toggle');
 const navClose = document.getElementById('nav-close');
 
+  
 // MENU SHOWN
 if(navToggle){
     navToggle.addEventListener('click', () =>{
@@ -18,7 +19,7 @@ if(navClose){
 }
 
 // REMOVE MENU ON MOBILE
-const navLink = document.querySelectorAll('.nav-link')
+const navLink = document.querySelectorAll('.nav__link')
 
 const linkAction = () =>{
     const navMenu = document.getElementById('nav-menu')

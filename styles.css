@@ -174,6 +174,8 @@ img{
     top: 0;
 }
 
+  
+
 /* Change Background Header */
 .bg-header{
     box-shadow: 0 1px 16px hsla(210, 55%, 24%, .12);
@@ -265,7 +267,7 @@ img{
     
     .home__title{
         font-size: 2rem;
-    }
+    } 
 }
 
 /* For Taller Devices */
@@ -293,6 +295,13 @@ img{
     }
 }
 
+/* Hide navigation menu by default on mobile */
+/* @media (max-width: 768px) {
+    #nav-menu {
+      display: none;
+    }
+} */
+  
 /* For Larger Devices */
 @media screen and (min-width: 1023px){
     .nav{
